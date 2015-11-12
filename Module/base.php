@@ -43,6 +43,12 @@ class base {
             'content'   =>  json_encode( $this -> data )
         );
 
+        $values = array( 'folder' => './Log/' , 'file' => 'log.txt' );
+
+        $log = new Logging($values);
+
+        $log -> main_logging( filter_input(INPUT_SERVER, 'REMOTE_ADDR'), json_encode($options) );
+
         $this -> context = stream_context_create( $options );
 
         return $this;
