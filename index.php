@@ -19,6 +19,7 @@
 
     include './Module/functions.php';
     require './Module/base.php';
+    require './Module/logging.php';
 
     /*
      * 動作パラメーター
